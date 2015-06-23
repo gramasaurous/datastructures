@@ -1,0 +1,4 @@
+#!/bin/sh -x
+#cid + bcat.c
+#git commit -a
+gcc -g -O0 -Wall -Wextra -std=gnu99 bcat.c -o bcat

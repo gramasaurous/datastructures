@@ -1,0 +1,35 @@
+Script started on Tue 06 Nov 2012 09:31:41 AM PST
+ ____________________________________________________________________ 
+/ __        __   _                            ____             _     \
+| \ \      / /__| | ___ ___  _ __ ___   ___  | __ )  __ _  ___| | __ |
+|  \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \ |  _ \ / _` |/ __| |/ / |
+|   \ V  V /  __/ | (_| (_) | | | | | |  __/ | |_) | (_| | (__|   <  |
+|    \_/\_/ \___|_|\___\___/|_| |_| |_|\___| |____/ \__,_|\___|_|\_\ |
+|                                                                    |
+|   ____           _                     _                           |
+|  / ___|_ __ __ _| |__   __ _ _ __ ___ | |                          |
+| | |  _| '__/ _` | '_ \ / _` | '_ ` _ \| |                          |
+| | |_| | | | (_| | | | | (_| | | | | | |_|                          |
+|  \____|_|  \__,_|_| |_|\__,_|_| |_| |_(_)                          |
+\                                                                    /
+ -------------------------------------------------------------------- 
+       \   ,__,
+        \  (..)____
+           (__)    )\
+              ||--|| *
+{ggreving:lab5}$ mk list1.c
++ for CSOURCE in '$*'
++ cid + list1.c
++ checksource list1.c
+++ echo list1.c
+++ sed 's/\.c$//'
++ EXECBIN=list1
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
+list1.c: In function ‘main’:
+list1.c:15: warning: implicit declaration of function ‘malloc’
+list1.c:15: warning: incompatible implicit declaration of built-in function ‘malloc’
+list1.c:12: warning: unused parameter ‘argc’
+{ggreving:lab5}$ exit
+exit
+
+Script done on Tue 06 Nov 2012 09:32:58 AM PST

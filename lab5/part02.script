@@ -1,0 +1,69 @@
+Script started on Tue 06 Nov 2012 09:11:25 AM PST
+ ____________________________________________________________________ 
+/ __        __   _                            ____             _     \
+| \ \      / /__| | ___ ___  _ __ ___   ___  | __ )  __ _  ___| | __ |
+|  \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \ |  _ \ / _` |/ __| |/ / |
+|   \ V  V /  __/ | (_| (_) | | | | | |  __/ | |_) | (_| | (__|   <  |
+|    \_/\_/ \___|_|\___\___/|_| |_| |_|\___| |____/ \__,_|\___|_|\_\ |
+|                                                                    |
+|   ____           _                     _                           |
+|  / ___|_ __ __ _| |__   __ _ _ __ ___ | |                          |
+| | |  _| '__/ _` | '_ \ / _` | '_ ` _ \| |                          |
+| | |_| | | | (_| | | | | (_| | | | | | |_|                          |
+|  \____|_|  \__,_|_| |_|\__,_|_| |_| |_(_)                          |
+\                                                                    /
+ -------------------------------------------------------------------- 
+       \   ,__,
+        \  (..)____
+           (__)    )\
+              ||--|| *
+{ggreving:lab5}$ gdb uninit
+GNU gdb (GDB) Red Hat Enterprise Linux (7.2-50.el6)
+Copyright (C) 2010 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /afs/cats.ucsc.edu/users/a/ggreving/Private/CMPS012/lab5/uninit...done.
+(gdb) run
+Starting program: /afs/cats.ucsc.edu/users/a/ggreving/Private/CMPS012/lab5/uninit 
+32767
+
+Program received signal SIGSEGV, Segmentation fault.
+0x000000000040051e in main (argc=1, argv=0x7fffffffe328) at uninit.c:10
+10	   printf ("%d\n", *pointer);
+Missing separate debuginfos, use: debuginfo-install glibc-2.12-1.47.el6_2.12.x86_64
+(gdb) where
+#0  0x000000000040051e in main (argc=1, argv=0x7fffffffe328) at uninit.c:10
+(gdb) list
+5	
+6	int main (int argc, char **argv) {
+7	   int foo;
+8	   printf ("%d\n", foo);
+9	   int *pointer;
+10	   printf ("%d\n", *pointer);
+11	}
+(gdb) print p[Kfoo
+$1 = 32767
+(gdb) print pointer
+$2 = (int *) 0x0
+(gdb) print *pointer
+Cannot access memory at address 0x0
+(gdb) print argc[Kv[0]
+$3 = 0x7fffffffe5b7 "/afs/cats.ucsc.edu/users/a/ggreving/Private/CMPS012/lab5/uninit"
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 29986] will be killed.
+
+Quit anyway? (y or n) y
+{ggreving:lab5}$ gdb uninit[6Pexitpstatus 139[4Pecho $?valgrind uninit[4Pmk uninit.c[3Pgit pushcommit[2Ppushadd READMEbcat.c[3Pnano[C[C[C[C[C[C[C[3Pgit pushsubmit cmps012b-wm.f12 lab4 READMEbcat.cREADME[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit push[Knano bcat.c[4hgit[4l add[C[C[C[C[C[C[CREADME[6Ppushcommit[2Ppushmk uninit.cvalgrind uninit[8Pecho $?pstatus 139[7Pexitgdb uninit[Kgdb uninit[6Pexitpstatus 139[4Pecho $?valgrind uninit[4Pmk uninit.cvalgrind uninit[8Pecho $?pstatus 139[7Pexitgdb uninit[Kls
+documentation  malloc.c  part01.script	RCS	   uninit
+list1.c        mk	 part02.script	README.md  uninit.c
+{ggreving:lab5}$ x[Kexit
+exit
+
+Script done on Tue 06 Nov 2012 09:12:58 AM PST
