@@ -1,0 +1,98 @@
+$Id: SCORE,v 1.1 2012-10-31 17:01:32-07 - - $
+
+Copy SCORE and test files into student's directory.
+
+In the table below, each number in parens is the maximum score
+for consideration.  Write a negative number in the left margin
+for each point deduction and include a reason for the
+deduction.  Do not deduct more points than the particular item
+is worth.
+
+STUDENT'S NAME =
+
+________________________________________________________________________
+
+GENERAL = /6 points
+
+     mk.build
+
+     (3) gmake produced class files and jar files.  if not,
+	 compiler and jar manually.
+
+     (3) one point off for each DIFFERENT checksource complaint
+         but not more than 3 points off.
+
+total general =
+
+________________________________________________________________________
+
+PROGRAM SOURCE = /27 points
+
+     (3) good meaningful idents (not 1 letter) and good
+         indentation
+
+     (3) class options has constructor to properly analyze
+         args
+
+     (3) treemap.put function properly inserts new node as leaf,
+         returns old value, if any, else null.
+
+     (3) treemap.get function does a proper binary search on a
+	 tree.  returns null for not found.
+
+     (3) treemap visit_all_inorder properly implemented.
+
+     (3) jxref.scanfile creates a treemap and adds words to it
+	 in the inner loop
+
+     (3) jxref.scanfile inner loop handles the queue as a value
+	 in the inner loop
+
+     (3) jxref.scanfile added code to print out the map using
+	 both of the traversals, depending on the -d option.
+
+     (3) jxref.scanfile code to obey the various options.
+
+total program source =
+
+________________________________________________________________________
+
+PROGRAM TESTING = /27 points
+
+     When checking output, note that the Perl program does not
+     handle the -d option.
+
+     mk.tests
+
+     (3) does stdin work for tests 1 and 5
+
+     (3) test 2 handles a single file
+
+     (3) test 3 handles multiple files
+
+     (3) tests 4 and 5 -c option prints only counts
+
+     (3) -d option in test6 prints debug mode and shows tree
+         to be reasonable (but not balanced only if by accident)
+
+     (3) -f option in test7 folds cases
+
+     (3) error messages always to stderr (see test*.err),
+	 correct exit status for all test runs (see test*.log).
+
+     (6) miscellaneous.  Deduct 1 point (max 6) for each test
+	 run that crashed with a Java error and traceback.  If
+	 all programs ran to completion without Java crashing,
+	 regardless of output, then don't deduct points under
+	 this iterm.
+
+total program testing =
+
+________________________________________________________________________
+
+TOTALSCORE=
+
+Append a number between 1 and 60 to the TOTALSCORE line above.
+Delete any excessively large files from the result of grading.
+Make a note of them below.
+
