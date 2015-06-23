@@ -1,0 +1,22 @@
+#Graham Greving
+#ggreving
+
+GCC = gcc -g -O0 -Wall -Wextra -std=gnu99
+EXECBIN1 = numsort
+EXECBIN2 = linesort
+OBJECT1 = numsort.o inssort.o
+OBJECT2 = linesort.o inssort.o
+
+
+all : ${EXECBIN1} ${EXECBIN2}
+	
+
+${EXECBIN1} : ${OBJECT1}
+	${GCC} -o $@ {$OBJECT1}
+
+${EXECBIN2} : ${OBJECT2}
+	${GCC} -o $@ {$OBJECT2}
+
+${OBJECT1} : numsort.c 
+
+${OBJECT2} : linesort.c

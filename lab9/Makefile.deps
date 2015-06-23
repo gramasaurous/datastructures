@@ -1,0 +1,3 @@
+# Makefile.deps created Wed Dec  5 15:49:55 PST 2012
+inssort.o: inssort.c inssort.h
+numsort.o: numsort.c inssort.h
